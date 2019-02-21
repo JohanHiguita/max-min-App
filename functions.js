@@ -25,13 +25,13 @@ exports.validates = function(value) {
 
 exports.getLargestNum = function(num) {
   const num_hex = num.split(""); // convertir Array
-  const largest_num = largest(num_hex).join("");
+  const largest_num = largest(num_hex).join("").toUpperCase();
   return largest_num;
 };
 
 exports.getSmallestNum = function(num) {
   const num_hex = num.split(""); // convertir Array
-  const smallest_num = smallest(num_hex, true).join("");
+  const smallest_num = smallest(num_hex, true).join("").toUpperCase();
 	return smallest_num;
 	
 };
@@ -62,6 +62,7 @@ function largest(arr_hex) {
   const max_dec = Math.max(...num_dec); // max value (DEC)
   const max_hex = max_dec.toString(16); // max value (HEX)
   const indexes = getIndexes(arr_hex, max_hex);
+  console.log(indexes)
 
   const changed_array = changeDigits(arr_hex, indexes, true);
   return changed_array;
@@ -69,9 +70,14 @@ function largest(arr_hex) {
 
 function getIndexes(arr, val) {
   // indices de los números mayores en el array
-  var indexes = [],
-    i;
-  for (i = 0; i < arr.length; i++) if (arr[i] === val) indexes.push(i);
+  var indexes = [],i;
+    for (i = 0; i < arr.length; i++) {
+    if (arr[i] === val.toLowerCase() || arr[i] === val.toUpperCase()){
+      indexes.push(i);
+    }
+     
+  }
+  
   return indexes;
 }
 
