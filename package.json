@@ -1,0 +1,33 @@
+{
+  "name": "test-neuvoo",
+  "version": "1.0.0",
+  "description": "Test neuvoo ",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohanHiguita/max-min-App.git"
+  },
+  "keywords": [
+    "Node.js",
+    "PHP",
+    "web sockets"
+  ],
+  "author": "Johan Higuita",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JohanHiguita/max-min-App/issues"
+  },
+  "homepage": "https://github.com/JohanHiguita/max-min-App#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "is-hexadecimal": "^1.0.2",
+    "php-express": "0.0.3",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
