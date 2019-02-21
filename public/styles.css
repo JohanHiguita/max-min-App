@@ -1,0 +1,23 @@
+.page-content{
+  border: 2px solid red;
+  height: 100vh;
+}
+
+.screens {
+  border: 2px solid green;
+  width: 800px;
+  padding: 20px;
+}
+
+.screen {
+  border: 2px solid blue;
+ height: 100%; 
+ padding: 50px;
+ border-radius: 15px;
+ 
+  
+}
+
+.btn-random{
+  width: 100%;  
+}

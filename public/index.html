@@ -3,19 +3,77 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Neuvoo text - Johan Higuita</title>
-    <link rel="stylesheet" href="" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Johan App</h1>
-    <h4>Prueba</h4>
-    <form action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
-    </form>
+    <div
+      class="page-content bg-light d-flex justify-content-center align-items-center"
+    >
+      <div class="screens ">
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="screen bg-dark">
+              <form>
+                <div class="row">
+                  <div class="form-group col">
+                    <input
+                      type="number"
+                      class="form-control"
+                      min="1"
+                      max="30"
+                      placeholder="dígitos"
+                    />
+                  </div>
+                  <div class="col text-right">
+                    <button type="button" class="btn btn-info btn-random">Random</button>
+                  </div>
+                </div>
+                <input
+                  type="text"
+                  class="form-control mb-3"
+                  min="1"
+                  max="30"
+                  placeholder="masa (HEX)"
+                />
+                <input class="btn btn-success btn-block" type="submit" value="Calcular">
+              </form>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="screen bg-dark text-light">
+                <p><b>Número ingresado: </b><span>56HFFFDST</span></p>
+                <p>
+                  <b>Número mayor: </b><span>xxxxxxxxxx</span><br />
+                  <b>Número menor: </b><span>xxxxxxxxxx</span>
+                </p> 
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script
-      src="https://code.jquery.com/jquery-3.3.1.min.js"
-      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
     <script src="/socket.io/socket.io.js"></script>

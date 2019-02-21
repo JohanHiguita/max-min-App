@@ -21,11 +21,6 @@ io.on("connection", function(socket) {
       text: num
     })
   });
-
-  
-
-
-
 })
 
 http.listen(3000, function() {
