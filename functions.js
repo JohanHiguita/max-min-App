@@ -23,21 +23,20 @@ exports.validates = function(value) {
   return "OK";
 };
 
-exports.getLargerNum = function(num) {
+exports.getLargestNum = function(num) {
   const num_hex = num.split(""); // convertir Array
-  const largest_num = getLargerArray(num_hex).join("");
+  const largest_num = largest(num_hex).join("");
   return largest_num;
 };
 
-exports.getLowestNum = function(num) {
+exports.getSmallestNum = function(num) {
   const num_hex = num.split(""); // convertir Array
-  const lowest_num = lowest(num_hex, true).join("");
-  console.log(`el número es ${lowest_num} !`)
-	return lowest_num;
+  const smallest_num = smallest(num_hex, true).join("");
+	return smallest_num;
 	
 };
 
-function lowest(arr_hex, first_digit) {
+function smallest(arr_hex, first_digit) {
   const num_dec = arr_hex.map(function(num) {
     return parseInt(num, 16);
   });
@@ -55,7 +54,7 @@ function lowest(arr_hex, first_digit) {
   return changed_array;
 }
 
-function getLargerArray(arr_hex) {
+function largest(arr_hex) {
   // array con elementos en el orden del número mayor
   const num_dec = arr_hex.map(function(num) {
     return parseInt(num, 16);
@@ -76,15 +75,15 @@ function getIndexes(arr, val) {
   return indexes;
 }
 
-function changeDigits(arr, indexes, largest) {
+function changeDigits(arr, indexes, is_largest) {
   if (indexes.includes(0)) {
     //Sí hay un número mayor en la primera posición
     const first_element = [arr[0]];
     arr.shift(); //separar el primer elemento y obtener el número mayor de la parte restante
-		if (largest) {
-			return first_element.concat(getLargerArray(arr)); // función recursiva	
+		if (is_largest) {
+			return first_element.concat(largest(arr)); // función recursiva	
 		} else {
-			return first_element.concat(lowest(arr, false)); // función recursiva
+			return first_element.concat(smallest(arr, false)); // función recursiva
 		}
 		
   } else {
