@@ -2,6 +2,7 @@ var express = require("express")
 var app = express()
 var http = require("http").Server(app)
 var io = require("socket.io")(http)
+const fns = require('./functions');
 
 app.use(express.static('public'))
 
@@ -13,12 +14,16 @@ app.get("/", function(req, res) {
 io.on("connection", function(socket) {
 	console.log("a user connected");
 	socket.on('num request', function(num){
-  
-    console.log('message: ' + num);
+    const highest = fns.getLargestNum(num)
+    const lowest = fns.getSmallestNum(num)
+
     socket.emit('response num', {
-      id: 1,
-      name: "Johan Higuita",
-      text: num
+      messagge: 'OK',
+      initial: num,
+      mayor: highest,
+      menor: lowest,
+      indexes: []
+    
     })
   });
 })

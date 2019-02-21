@@ -42,7 +42,7 @@
                   </div>
                 </div>
               </form>
-              <form>
+              <form id="form-masa">
                 <input
                   type="text"
                   class="form-control mb-3 input-masa"
@@ -55,18 +55,25 @@
                   class="btn btn-success btn-block"
                   type="submit"
                   value="Calcular"
-                  
                 />
               </form>
             </div>
           </div>
           <div class="col-md-6 mb-4">
             <div class="screen bg-dark text-light">
-              <p><b>Número ingresado: </b><span>56HFFFDST</span></p>
-              <p>
-                <b>Número mayor: </b><span>xxxxxxxxxx</span><br />
-                <b>Número menor: </b><span>xxxxxxxxxx</span>
-              </p>
+              <div class="success-response">
+                <p><b>Número ingresado: </b><span id="initial-num"></span></p>
+                <p>
+                  <b>Número mayor: </b><span id="highest-num"></span><br />
+                  <b>Número menor: </b><span id="lowest-num"></span>
+                </p>
+              </div>
+              <div class="error-response">
+                <div class="alert alert-danger" role="alert">
+                  <b>Error:</b> <br />
+                  <span class="error-message">Este es un error!</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

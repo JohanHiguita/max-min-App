@@ -12,7 +12,7 @@
 .screen {
   border: 2px solid blue;
  height: 100%; 
- padding: 40px;
+ padding: 50px 30px;
  border-radius: 15px;
  
   
@@ -20,4 +20,8 @@
 
 .btn-random{
   width: 100%;  
+}
+
+.success-response, .error-response {
+  display: none;
 }
