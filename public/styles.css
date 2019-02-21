@@ -5,14 +5,14 @@
 
 .screens {
   border: 2px solid green;
-  width: 800px;
+  width: 900px;
   padding: 20px;
 }
 
 .screen {
   border: 2px solid blue;
  height: 100%; 
- padding: 50px;
+ padding: 40px;
  border-radius: 15px;
  
   

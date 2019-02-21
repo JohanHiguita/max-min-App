@@ -21,40 +21,52 @@
         <div class="row">
           <div class="col-md-6 mb-4">
             <div class="screen bg-dark">
-              <form>
+              <form id="form-digitos">
                 <div class="row">
                   <div class="form-group col">
                     <input
                       type="number"
-                      class="form-control"
+                      class="form-control input-digitos"
                       min="1"
                       max="30"
                       placeholder="dígitos"
+                      required
                     />
                   </div>
                   <div class="col text-right">
-                    <button type="button" class="btn btn-info btn-random">Random</button>
+                    <input
+                      class="btn btn-info btn-random "
+                      type="submit"
+                      value="Random"
+                    />
                   </div>
                 </div>
+              </form>
+              <form>
                 <input
                   type="text"
-                  class="form-control mb-3"
+                  class="form-control mb-3 input-masa"
                   min="1"
                   max="30"
                   placeholder="masa (HEX)"
+                  required
                 />
-                <input class="btn btn-success btn-block" type="submit" value="Calcular">
+                <input
+                  class="btn btn-success btn-block"
+                  type="submit"
+                  value="Calcular"
+                  
+                />
               </form>
             </div>
           </div>
           <div class="col-md-6 mb-4">
             <div class="screen bg-dark text-light">
-                <p><b>Número ingresado: </b><span>56HFFFDST</span></p>
-                <p>
-                  <b>Número mayor: </b><span>xxxxxxxxxx</span><br />
-                  <b>Número menor: </b><span>xxxxxxxxxx</span>
-                </p> 
-
+              <p><b>Número ingresado: </b><span>56HFFFDST</span></p>
+              <p>
+                <b>Número mayor: </b><span>xxxxxxxxxx</span><br />
+                <b>Número menor: </b><span>xxxxxxxxxx</span>
+              </p>
             </div>
           </div>
         </div>
