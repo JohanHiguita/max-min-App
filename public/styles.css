@@ -1,21 +1,16 @@
 .page-content{
-  border: 2px solid red;
   height: 100vh;
 }
 
 .screens {
-  border: 2px solid green;
   width: 900px;
   padding: 20px;
 }
 
 .screen {
-  border: 2px solid blue;
  height: 100%; 
  padding: 50px 30px;
  border-radius: 15px;
- 
-  
 }
 
 .btn-random{
@@ -24,4 +19,11 @@
 
 .success-response, .error-response {
   display: none;
+  font-size: 1.1rem;
+}
+
+.digit-color{
+ 
+  border-bottom: 3px solid yellow;
+
 }
